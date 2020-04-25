@@ -1,5 +1,13 @@
 package com.vasu.app;
 
-public class Test {
+import java.util.Date;
 
+public class Test {
+public Test() {
+	System.out.println("Default Constructor");
+}
+public static void main(String[] args) {
+	Date d=new Date();
+	System.out.println(d.getDate());
+}
 }
