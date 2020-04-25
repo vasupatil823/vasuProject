@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.vasu.model.Employee;
 import com.vasu.service.EmployeeService;
 
-@Controller
+@Controller 
 public class EmployeeController {	
 	@Autowired
 	EmployeeService service;
