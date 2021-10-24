@@ -14,12 +14,12 @@ public class LoginDAOImpl implements LoginDAO {
 	JdbcTemplate template;
 
 	public int register(Login login) {
-		String sql="INSERT INTO USERS(`first_name`, `last_name`, `email`, `phone`, `username`, `password`)VALUES('"+login.getFirstName()+"','"+login.getLastName()+"','"+login.getEmail()+"','"+login.getMoNo()+"','"+login.getUsername()+"','"+login.getPassword()+"')";
+		String sql="INSERT INTO USERS(firstName, lastName, email, phone, username, password)VALUES('"+login.getFirstName()+"','"+login.getLastName()+"','"+login.getEmail()+"','"+login.getMoNo()+"','"+login.getUsername()+"','"+login.getPassword()+"')";
 		return template.update(sql);
 	}
 
 	public String login(String username, String password) {
-		String sql="select first_name from users where username='"+username+"' and password='"+password+"'";
+		String sql="select firstName from USERS where username='"+username+"' and password='"+password+"'";
 		List<String> users = template.queryForList(sql,String.class);
 		if(users.isEmpty()) {
 			return null;

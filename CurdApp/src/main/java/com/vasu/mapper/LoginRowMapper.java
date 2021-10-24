@@ -12,8 +12,8 @@ public class LoginRowMapper implements org.springframework.jdbc.core.RowMapper<L
 	public Login mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Login login=new Login();
 		login.setUserId(rs.getInt("uid"));
-		login.setFirstName(rs.getString("first_name"));
-		login.setLastName(rs.getString("last_name"));
+		login.setFirstName(rs.getString("firstName"));
+		login.setLastName(rs.getString("lastName"));
 		login.setEmail(rs.getString("email"));
 		login.setMoNo(rs.getString("phone"));
 		login.setUsername(rs.getString("username"));
